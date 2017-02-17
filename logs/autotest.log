@@ -1,0 +1,135 @@
+[INFO ]_2017-02-14 09:17:52 :启动浏览器
+[INFO ]_2017-02-14 09:17:52 :开始启动
+[INFO ]_2017-02-14 09:17:56 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 09:17:56 :Retrying request
+[INFO ]_2017-02-14 09:17:56 :获取首页
+[INFO ]_2017-02-14 09:17:56 :当前浏览器为8f95fbc9-698e-474e-83c4-ba60cb1b001e
+[INFO ]_2017-02-14 09:18:01 :登陆成功
+[INFO ]_2017-02-14 09:18:01 :点击菜单栏
+[INFO ]_2017-02-14 09:18:01 :点击树目录
+[INFO ]_2017-02-14 09:33:40 :启动浏览器
+[INFO ]_2017-02-14 09:33:40 :开始启动
+[INFO ]_2017-02-14 09:33:44 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 09:33:44 :Retrying request
+[INFO ]_2017-02-14 09:33:44 :获取首页
+[INFO ]_2017-02-14 09:33:44 :当前浏览器为dd76a496-ebdc-4428-90eb-5186dac536ed
+[INFO ]_2017-02-14 09:33:48 :登陆成功
+[INFO ]_2017-02-14 09:33:48 :点击菜单栏
+[INFO ]_2017-02-14 09:33:49 :点击树目录
+[INFO ]_2017-02-14 09:46:26 :启动浏览器
+[INFO ]_2017-02-14 09:46:26 :开始启动
+[INFO ]_2017-02-14 09:46:31 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 09:46:31 :Retrying request
+[INFO ]_2017-02-14 09:46:31 :获取首页
+[INFO ]_2017-02-14 09:46:31 :当前浏览器为e1433205-80b6-4354-9e7d-ee8ffd30098a
+[INFO ]_2017-02-14 09:46:35 :登陆成功
+[INFO ]_2017-02-14 09:46:35 :点击菜单栏
+[INFO ]_2017-02-14 09:46:36 :点击树目录
+[INFO ]_2017-02-14 10:00:46 :启动浏览器
+[INFO ]_2017-02-14 10:00:46 :开始启动
+[INFO ]_2017-02-14 10:00:50 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:00:50 :Retrying request
+[INFO ]_2017-02-14 10:00:50 :获取首页
+[INFO ]_2017-02-14 10:00:50 :当前浏览器为662069ea-1f18-4308-9991-9d2db6e252c9
+[INFO ]_2017-02-14 10:00:54 :登陆成功
+[INFO ]_2017-02-14 10:00:54 :点击菜单栏
+[INFO ]_2017-02-14 10:00:54 :点击树目录
+[INFO ]_2017-02-14 10:02:09 :启动浏览器
+[INFO ]_2017-02-14 10:02:09 :开始启动
+[INFO ]_2017-02-14 10:02:13 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:02:13 :Retrying request
+[INFO ]_2017-02-14 10:02:13 :获取首页
+[INFO ]_2017-02-14 10:02:13 :当前浏览器为bf2fe8ec-d57f-4f7c-b672-d92df011c5bb
+[INFO ]_2017-02-14 10:02:17 :登陆成功
+[INFO ]_2017-02-14 10:02:17 :点击菜单栏
+[INFO ]_2017-02-14 10:02:18 :点击树目录
+[INFO ]_2017-02-14 10:02:57 :启动浏览器
+[INFO ]_2017-02-14 10:02:57 :开始启动
+[INFO ]_2017-02-14 10:03:01 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:03:01 :Retrying request
+[INFO ]_2017-02-14 10:03:01 :获取首页
+[INFO ]_2017-02-14 10:03:01 :当前浏览器为230874fa-81a6-4543-b727-f5d02365b36a
+[INFO ]_2017-02-14 10:03:05 :登陆成功
+[INFO ]_2017-02-14 10:03:05 :点击菜单栏
+[INFO ]_2017-02-14 10:03:06 :点击树目录
+[INFO ]_2017-02-14 10:29:56 :启动浏览器
+[INFO ]_2017-02-14 10:29:56 :开始启动
+[INFO ]_2017-02-14 10:30:00 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:30:00 :Retrying request
+[INFO ]_2017-02-14 10:30:00 :获取首页
+[INFO ]_2017-02-14 10:30:00 :当前浏览器为91acc86c-58b6-4331-9ba5-e14b11f63fa4
+[INFO ]_2017-02-14 10:30:04 :登陆成功
+[INFO ]_2017-02-14 10:30:05 :点击菜单栏
+[INFO ]_2017-02-14 10:30:05 :点击树目录
+[INFO ]_2017-02-14 10:45:03 :启动浏览器
+[INFO ]_2017-02-14 10:45:03 :开始启动
+[INFO ]_2017-02-14 10:45:07 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:45:07 :Retrying request
+[INFO ]_2017-02-14 10:45:07 :获取首页
+[INFO ]_2017-02-14 10:45:07 :当前浏览器为2bd92f31-603f-4657-814c-437bd696faab
+[INFO ]_2017-02-14 10:45:11 :登陆成功
+[INFO ]_2017-02-14 10:45:12 :点击菜单栏
+[INFO ]_2017-02-14 10:45:12 :点击树目录
+[INFO ]_2017-02-14 10:46:23 :启动浏览器
+[INFO ]_2017-02-14 10:46:23 :开始启动
+[INFO ]_2017-02-14 10:46:27 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:46:27 :Retrying request
+[INFO ]_2017-02-14 10:46:27 :获取首页
+[INFO ]_2017-02-14 10:46:27 :当前浏览器为c0f90ad1-f28a-4139-be20-cab573f8d8a6
+[INFO ]_2017-02-14 10:46:31 :登陆成功
+[INFO ]_2017-02-14 10:46:31 :点击菜单栏
+[INFO ]_2017-02-14 10:46:31 :点击树目录
+[INFO ]_2017-02-14 10:47:14 :启动浏览器
+[INFO ]_2017-02-14 10:47:14 :开始启动
+[INFO ]_2017-02-14 10:47:17 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:47:17 :Retrying request
+[INFO ]_2017-02-14 10:47:18 :获取首页
+[INFO ]_2017-02-14 10:47:18 :当前浏览器为f4df606c-5f21-421c-9010-41be4f2948e6
+[INFO ]_2017-02-14 10:47:22 :登陆成功
+[INFO ]_2017-02-14 10:47:22 :点击菜单栏
+[INFO ]_2017-02-14 10:47:22 :点击树目录
+[INFO ]_2017-02-14 10:50:38 :启动浏览器
+[INFO ]_2017-02-14 10:50:38 :开始启动
+[INFO ]_2017-02-14 10:50:41 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:50:41 :Retrying request
+[INFO ]_2017-02-14 10:50:41 :获取首页
+[INFO ]_2017-02-14 10:50:41 :当前浏览器为d472571f-c4c5-4799-80b8-299602bd2eea
+[INFO ]_2017-02-14 10:50:45 :登陆成功
+[INFO ]_2017-02-14 10:50:45 :点击菜单栏
+[INFO ]_2017-02-14 10:50:46 :点击树目录
+[INFO ]_2017-02-14 10:52:26 :启动浏览器
+[INFO ]_2017-02-14 10:52:26 :开始启动
+[INFO ]_2017-02-14 10:52:30 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:52:30 :Retrying request
+[INFO ]_2017-02-14 10:52:30 :获取首页
+[INFO ]_2017-02-14 10:52:30 :当前浏览器为443d0b5f-9dda-4503-84ca-a3fc50059fce
+[INFO ]_2017-02-14 10:52:34 :登陆成功
+[INFO ]_2017-02-14 10:52:34 :点击菜单栏
+[INFO ]_2017-02-14 10:52:35 :点击树目录
+[INFO ]_2017-02-14 10:57:28 :启动浏览器
+[INFO ]_2017-02-14 10:57:28 :开始启动
+[INFO ]_2017-02-14 10:57:32 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:57:32 :Retrying request
+[INFO ]_2017-02-14 10:57:32 :获取首页
+[INFO ]_2017-02-14 10:57:34 :当前浏览器为b76e8b36-0eee-49cf-85cf-2a852f89a65e
+[INFO ]_2017-02-14 10:57:38 :登陆成功
+[INFO ]_2017-02-14 10:57:38 :点击菜单栏
+[INFO ]_2017-02-14 10:57:38 :点击树目录
+[INFO ]_2017-02-14 10:58:52 :启动浏览器
+[INFO ]_2017-02-14 10:58:52 :开始启动
+[INFO ]_2017-02-14 10:58:56 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 10:58:56 :Retrying request
+[INFO ]_2017-02-14 10:58:56 :获取首页
+[INFO ]_2017-02-14 10:58:56 :当前浏览器为7a2e3318-7ed0-4981-955e-d7c0ff69b644
+[INFO ]_2017-02-14 10:59:00 :登陆成功
+[INFO ]_2017-02-14 10:59:00 :点击菜单栏
+[INFO ]_2017-02-14 10:59:01 :点击树目录
+[INFO ]_2017-02-14 13:24:29 :启动浏览器
+[INFO ]_2017-02-14 13:24:29 :开始启动
+[INFO ]_2017-02-14 13:24:33 :I/O exception (java.net.SocketException) caught when processing request: Software caused connection abort: recv failed
+[INFO ]_2017-02-14 13:24:33 :Retrying request
+[INFO ]_2017-02-14 13:24:33 :获取首页
+[INFO ]_2017-02-14 13:24:33 :当前浏览器为d5061b93-11bd-478b-b114-67a329373f97
+[INFO ]_2017-02-14 13:24:37 :登陆成功
+[INFO ]_2017-02-14 13:24:37 :点击菜单栏
+[INFO ]_2017-02-14 13:24:37 :点击树目录
