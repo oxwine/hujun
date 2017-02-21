@@ -59,7 +59,7 @@ public class Test {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		OperateDriver.close();
 				
 	}
 
