@@ -12,10 +12,10 @@ import org.openqa.selenium.WebElement;
 public class Table {
 	static WebElement talEle;
 	static int col;
-	private String talXpath = "//table[@id='tblist']";
+	private static String talXpath = "//table[@id='tblist']";
 	
 	public Table() {
-		
+		this("//table[@id='tblist']");
 	}
 
 	public Table(String tabXpath) {
@@ -44,7 +44,7 @@ public class Table {
 	
     //返回任务名称行号	
 	public  int getTask(String taskName) {
-		List<WebElement> trsInTbody = talEle.findElements(By.xpath("//table[@id='tblist']/tbody/tr"));
+		List<WebElement> trsInTbody = talEle.findElements(By.xpath(talXpath+"/tbody/tr"));
 		int i = 1;
 		for (WebElement tr:trsInTbody){
 			List<WebElement> tdsInTr = tr.findElements(By.tagName("td"));
@@ -61,10 +61,16 @@ public class Table {
 	
 	//获取特定行
 	private  WebElement getTrByRownum(int rownum){
-		List<WebElement> trsInTbody = talEle.findElements(By.xpath("//table[@id='tblist']/tbody/tr"));
+		List<WebElement> trsInTbody = talEle.findElements(By.xpath(talXpath+"/tbody/tr"));
 		WebElement tr = trsInTbody.get(rownum);
 		//System.out.println(tr.findElements(By.tagName("td")).get(1).getText());
 		return tr;
+	}
+	
+	public Integer getRowNum(){
+		List<WebElement> trsInTbody = talEle.findElements(By.xpath(talXpath+"/tbody/tr"));
+		return trsInTbody.size();
+		
 	}
 	
 	//根据行号，，列号 获取特定列td
