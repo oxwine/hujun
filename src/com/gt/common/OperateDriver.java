@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -227,6 +228,7 @@ public class OperateDriver {
 			
 			OperateDriver.switchToFrameBySRC("slave/status");
 			
+			//每次new一个对象问题
 			Table tal = new Table("//table[@class='table table-bordered table-hover definewidth m10']");
 			
 			int num = tal.getRowNum();
@@ -304,6 +306,45 @@ public class OperateDriver {
 			}
 		}
 		return data;
+	}
+	
+	//查询，并且获取可以运行的任务
+	public static void getMapNameAndIP(Table tal,List<String>  serverIPs) throws FileNotFoundException, IOException {
+
+		//		 tal = new Table("//table[@id='tblist']");
+        //		  serverIPs  = OperateDriver.getIdleServer();
+		//准备存储从Excel读取的任务名称
+		
+		List<String> data = new ArrayList<String>();
+		
+		//读取excel数据，存入data
+		data = OperateDriver.getTaskName();
+		
+		//获取data迭代器
+		ListIterator<String> da = data.listIterator();
+		
+		//准备存储taskName和IP地址 对应关系
+		Map<String,String> mapNameAndIp= new HashMap<String,String>();
+		while(da.hasNext()){
+			
+			String taskName = da.next();
+			//获取该任务的IP.taskName不存在的时候需要补充异常
+			if(tal.getTask(taskName)==0) {
+				System.out.println("查找不到或者当前页查找不到的用例名称为:"+taskName);
+				continue;
+			}
+			String ip = tal.getCellElement(taskName, "SlaveIP").getText();
+			//存在于可用服务器的IP任务保留
+			if(serverIPs.contains(ip)) {
+				
+			mapNameAndIp.put(taskName, ip);
+			
+			} else {
+				
+				System.out.println("不能运行的用例名称为:"+taskName+"IP地址为："+ip);
+				
+			}
+	}
 	}
 
 }

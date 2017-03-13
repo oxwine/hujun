@@ -85,8 +85,13 @@ public class Table {
     public  WebElement getCellElement(String taskName,String colName){
 		int col = colNum(colName);
 		int row = getTask(taskName);
-		System.out.println("行号为："+row+"列号为："+col);
-		WebElement  tdEle = getCellElement(row,col);
+		WebElement  tdEle = null;
+		if(row != 0){
+		System.out.println("任务名称为："+taskName+" 行号为："+row+"  列号为："+col);
+		tdEle = getCellElement(row,col);
+		} else {
+			new Exception("该任务不存在："+taskName);
+		}
 		return tdEle;
 	}
     

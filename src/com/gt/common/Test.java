@@ -19,6 +19,7 @@ public class Test {
 		try {
 			//登陆
 			OperateDriver.login();
+			
 			List<String>  serverIPs  = OperateDriver.getIdleServer();
 			//点击菜单
 			OperateDriver.clickMenu("业务管理", "任务分配");
@@ -26,8 +27,6 @@ public class Test {
 			OperateDriver.switchToFrameBySRC("task/list");
 			//获取table内容
 			Table tal = new Table("//table[@id='tblist']");
-			
-			//WebElement td = tal.getCellElement("execute002","管理操作");
 			
 			//准备存储从Excel读取的任务名称
 			List<String> data = new ArrayList<String>();
@@ -44,6 +43,10 @@ public class Test {
 				
 				String taskName = da.next();
 				//获取该任务的IP
+				if(tal.getTask(taskName)==0) {
+					System.out.println("查找不到或者当前页查找不到的用例名称为:"+taskName);
+					continue;
+				}
 				String ip = tal.getCellElement(taskName, "SlaveIP").getText();
 				//存在于可用服务器的IP任务保留
 				if(serverIPs.contains(ip)) {
@@ -52,7 +55,7 @@ public class Test {
 				
 				} else {
 					
-					System.out.println("不能运行的用例名称为:"+taskName+"IP地址为："+ip);
+					System.out.println("不能运行的用例名称为:"+taskName+"  IP地址为："+ip);
 					
 				}
 //				WebElement a = tal.getStartEle(taskName);
@@ -105,6 +108,11 @@ public class Test {
 								WebElement a = tal.getStartEle(key);
 								
 								a.click();
+								
+								OperateDriver.sleep(2.0);
+								
+						        OperateDriver.clickAlert();
+						        
 								mapNameAndIp.remove(key);
 								
 								serverIPs = OperateDriver.getIdleServer();
