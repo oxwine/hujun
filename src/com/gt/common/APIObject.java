@@ -237,14 +237,15 @@ public class APIObject {
 	 * 
 	 * @throws IOException
 	 */
-	public void importTestCases() throws IOException {
+	public void importTestCases(String filePath,String FirstLevelSuiteName) throws IOException {
 
-		InputStream ins = new FileInputStream(new File("C:/Users/Administrator/Desktop/ceshi.xlsx"));
+		InputStream ins = new FileInputStream(new File(filePath));
 		String[][] data = ExcelData.getData(ins, 2);
 
 		int pjID = api.getTestProjectByName(projectName).getId();
 
-		this.getFirstLevelSuiteIDByName("电子名片");
+		this.getFirstLevelSuiteIDByName(FirstLevelSuiteName);
+		System.out.println(firstLevelSuiteID);
 
 		int rowLength = data.length;
 		for (int i = 0; i < rowLength; i++) {
@@ -261,11 +262,12 @@ public class APIObject {
 
 	}
 
+
 	public static void main(String args[]) throws IOException {
 		// the following settings are required;
-		String url = "http://localhost/testlink/lib/api/xmlrpc/v1/xmlrpc.php";
-		String devKey = "1fd93356574d44866648dd3a3010f4ef";
-		String projectName = "Auto";
+		String url = PropertiesUtil.propMap.get("url");
+		String devKey = PropertiesUtil.propMap.get("devKey");
+		String projectName = PropertiesUtil.propMap.get("projectName");
 		String tp = "autoCases";
 		String buildName = "weeeewe";
 		String platform = "win7";
@@ -275,40 +277,11 @@ public class APIObject {
 		// "tested by hujun");
 		testlinkapi.getAPI();
 
-		// System.out.println(testlinkapi.needID);
-		// 读取EXCEL内容
-		// InputStream ins = new FileInputStream(new
-		// File("C:/Users/Administrator/Desktop/ceshi.xlsx"));
-		// String[][] data = ExcelData.getData(ins, 2);
-		//
-		// int pjID = api.getTestProjectByName(projectName).getId();
-		//
-		// testlinkapi.getFirstLevelSuiteIDByName("电子名片").getChildSuiteID(testlinkapi.firstLevelSuiteID,
-		// "323333");
-		//
-		// int rowLength = data.length;
-		// for (int i = 0; i < rowLength; i++) {
-		// if (data[i][2].isEmpty()) {
-		// String name = data[i][1];
-		// testlinkapi.getChildSuiteID(testlinkapi.firstLevelSuiteID, name);
-		// continue;
-		// } else {
-		// System.out.println(data[i][2]);
-		// api.createTestCase(data[i][2], testlinkapi.needID, pjID, "admin",
-		// data[i][5], null,
-		// data[i][6] + "<br>" + data[i][7], TestImportance.HIGH, null, null,
-		// null, true, null);
-		// }
-		// }
-		//
+//		testlinkapi.importTestCases(PropertiesUtil.propMap.get("filePath"), "电子名片");
 
-		// api.createTestCase(data[0][2], testlinkapi.needID, pjID, "admin",
-		// data[0][5], null,
-		// data[0][6] + "<br>" + data[0][7], TestImportance.HIGH, null, null,
-		// null, true, null);
-
+//		执行测试结果：
 		testlinkapi.getTestCases();
-		testlinkapi.executeTestCase("auto", 1, "tested by 马成功2");
+		testlinkapi.executeTestCase("auto", 1, "tested by 马成功ceshi");
 
 		// testlinkapi.creatCasese("autoTest 232");
 		// testlinkapi.uploadAttchment("C:\\terry.txt");

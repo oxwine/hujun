@@ -59,7 +59,8 @@ public class Test {
 					
 				}
 //				WebElement a = tal.getStartEle(taskName);
-//				WebElement ipEle = tal.getCellElement(taskName, "SlaveIP");
+			WebElement ipEle = tal.getCellElement(taskName, "SlaveIP");
+			
 				//System.err.println(ipEle.getText());
 				//a.click();
 //				OperateDriver.sleep(2.0);
@@ -70,8 +71,8 @@ public class Test {
 			Boolean flag = true;
 			while(flag){
 				
-				//可用IP为空时直接等待下一次循环
-				if(serverIPs.isEmpty()){
+				//可用IP为空,并且还有未运行的用例，直接等待下一次循环
+				if(serverIPs.isEmpty() && !mapNameAndIp.isEmpty()){
 					
 					OperateDriver.sleep(2.0);
 					
