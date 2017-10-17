@@ -27,15 +27,17 @@ public class DriverUtils {
 	 * 
 	 * @return WebDriver
 	 * @author hujun 2017-02-09
+	 * @throws Exception 
 	 * 
 	 */
-	public static WebDriver getWebDriver() {
+	public static WebDriver getWebDriver() throws Exception {
 
 		LogUtil.logInfo("开始启动");
 
 		try {
 
 			// 设置IE驱动
+			System.out.println("获取驱动");
 			File file = new File("res/IEDriverServer.exe");
 			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 
@@ -45,11 +47,12 @@ public class DriverUtils {
 					true);
 			if (driver==null)
 			driver = new InternetExplorerDriver(cap);
+			System.out.println("获取驱动结束");
 		
 		} catch (Exception e) {
-
-			driver = new InternetExplorerDriver();
-			
+            
+			//driver = new InternetExplorerDriver();
+			e.printStackTrace();
 		}
 
 		

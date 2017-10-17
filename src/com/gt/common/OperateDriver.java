@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang.SystemUtils;
 import org.jboss.netty.util.internal.SystemPropertyUtil;
@@ -101,14 +102,18 @@ public class OperateDriver {
 			// 检查元素是否纯在
 			String menuXpath = "//div[contains(text(),'"+menuName+"')]";
 			System.out.println(menuXpath);
-			OperateDriver.isExistElement(menuXpath);
+			Boolean flag = OperateDriver.isExistElement(menuXpath);
 
 			// 查找菜单元素
+			if(flag==true) {
 			WebElement menuEle = webdriver.findElement(By.xpath(menuXpath));
-
+			
 			// js执行菜单点击
 			LogUtil.logInfo("点击菜单栏");
 			((JavascriptExecutor) webdriver).executeScript("arguments[0].click();", menuEle);
+			}else {
+				System.out.println("元素不存在");
+			}
 		} catch (Exception e) {
 
 			LogUtil.logInfo("点击menuEle{" + menuName + "}失败");
@@ -129,8 +134,10 @@ public class OperateDriver {
 
 			// js执行树形目录点击
 			LogUtil.logInfo("点击树目录");
-			((JavascriptExecutor) webdriver).executeScript("arguments[0].click();", treeEle);
+			//((JavascriptExecutor) webdriver).executeScript("arguments[0].click();", treeEle);
 			treeEle.click();
+			
+			System.out.println("成功点击执行机状态树");
 		} catch (Exception e) {
 			LogUtil.logInfo("点击treeEle{" + menuName + "}失败");
 			throw new Exception("点击treeEle" + menuName + "出现异常");
@@ -200,6 +207,7 @@ public class OperateDriver {
 	public static void clickAlert(){
 		List<WebElement> ele = 
 				OperateDriver.webdriver.findElements(By.xpath("//table[@id='tblist']/preceding-sibling::div"));
+		//OperateDriver.webdriver.manage().timeouts().implicitlyWait(2, TimeUnit.HOURS);
 //		if ( ele.size()==1 ) {
 		//System.out.println(ele.get(0).getAttribute("style"));
 		System.out.println(ele.get(0).getText());
@@ -229,7 +237,11 @@ public class OperateDriver {
 			OperateDriver.switchToFrameBySRC("slave/status");
 			
 			//每次new一个对象问题
+			OperateDriver.isExistElement("//table[@class='table table-bordered table-hover definewidth m10']");
+			
 			Table tal = new Table("//table[@class='table table-bordered table-hover definewidth m10']");
+			
+			
 			
 			int num = tal.getRowNum();
 			System.out.println("当前服务数量："+num);
