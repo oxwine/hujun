@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.openqa.selenium.WebElement;
 
@@ -38,7 +39,7 @@ public class Test {
 			ListIterator<String> da = data.listIterator();
 			
 			//准备存储taskName和IP地址 对应关系
-			Map<String,String> mapNameAndIp= new HashMap<String,String>();
+			Map<String,String> mapNameAndIp= new ConcurrentHashMap<String,String>();
 			while(da.hasNext()){
 				
 				String taskName = da.next();
@@ -51,6 +52,7 @@ public class Test {
 				//存在于可用服务器的IP任务保留
 				if(serverIPs.contains(ip)) {
 					
+				System.out.println("需要运行的任务："+taskName+"   "+"IP为："+ip);	
 				mapNameAndIp.put(taskName, ip);
 				
 				} else {
@@ -58,13 +60,7 @@ public class Test {
 					System.out.println("不能运行的用例名称为:"+taskName+"  IP地址为："+ip);
 					
 				}
-//				WebElement a = tal.getStartEle(taskName);
-			WebElement ipEle = tal.getCellElement(taskName, "SlaveIP");
-			
-				//System.err.println(ipEle.getText());
-				//a.click();
-//				OperateDriver.sleep(2.0);
-//				OperateDriver.clickAlert();
+
 			}
 			
 			//运行服务
@@ -77,6 +73,8 @@ public class Test {
 					OperateDriver.sleep(2.0);
 					
 					serverIPs  = OperateDriver.getIdleServer();
+					
+					OperateDriver.clickMenu("业务管理", "任务分配");
 					
 					continue;
 				
@@ -92,6 +90,10 @@ public class Test {
 				} else {
 					
 					//循环IP判断
+					
+					
+					OperateDriver.switchToFrameBySRC("task/list");
+					
 					Iterator<String> ip = serverIPs.iterator();
 					while(ip.hasNext()){
 						
@@ -99,12 +101,10 @@ public class Test {
 						
 						Set<String> nameKeys = mapNameAndIp.keySet();
 						
-						Iterator<String> keys = nameKeys.iterator();
-						while(keys.hasNext()){
+						//Iterator<String> keys = nameKeys.iterator();
+						for(String key : nameKeys){
 							
-							String key = keys.next();
-							
-							if(mapNameAndIp.get(key).equals(ipAdress)){
+                          if(mapNameAndIp.get(key).equals(ipAdress)){
 								
 								WebElement a = tal.getStartEle(key);
 								
@@ -113,18 +113,37 @@ public class Test {
 								OperateDriver.sleep(2.0);
 								
 						        OperateDriver.clickAlert();
-						        
-								mapNameAndIp.remove(key);
-								
-								serverIPs = OperateDriver.getIdleServer();
-								
-								OperateDriver.switchToDefaultContent();
-								
-								OperateDriver.clickMenu("业务管理", "任务分配");
-								
-								OperateDriver.switchToFrameBySRC("task/list");
+						        //删除键
+						        mapNameAndIp.remove(key);
 							}
 						}
+						
+						serverIPs.clear();
+//						while(keys.hasNext()){
+//							
+//							String key = keys.next();
+//							
+//							if(mapNameAndIp.get(key).equals(ipAdress)){
+//								
+//								WebElement a = tal.getStartEle(key);
+//								
+//								a.click();
+//								
+//								OperateDriver.sleep(2.0);
+//								
+//						        OperateDriver.clickAlert();
+//						        //删除键
+//								keys.remove();
+//								
+//								serverIPs = OperateDriver.getIdleServer();
+//								
+//								OperateDriver.switchToDefaultContent();
+//								
+//								OperateDriver.clickMenu("业务管理", "任务分配");
+//								
+//								OperateDriver.switchToFrameBySRC("task/list");
+//							}
+//						}
 					}	
 				}
 			}

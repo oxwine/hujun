@@ -11,7 +11,7 @@ import java.util.Properties;
 /**
  * 读取properties文件
  * 
- * @author chenpan
+ * @author hj
  * 
  */
 public class PropertiesUtil {

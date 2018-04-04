@@ -140,7 +140,8 @@ public class OperateDriver {
 			System.out.println("成功点击执行机状态树");
 		} catch (Exception e) {
 			LogUtil.logInfo("点击treeEle{" + menuName + "}失败");
-			throw new Exception("点击treeEle" + menuName + "出现异常");
+			throw new Exception("点击treeEle" + menuName + "出现异常",e);
+			
 		}
 	}
 

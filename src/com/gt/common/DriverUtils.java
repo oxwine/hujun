@@ -51,8 +51,8 @@ public class DriverUtils {
 		
 		} catch (Exception e) {
             
-			//driver = new InternetExplorerDriver();
-			e.printStackTrace();
+			driver = new InternetExplorerDriver();
+			//e.printStackTrace();
 		}
 
 		
