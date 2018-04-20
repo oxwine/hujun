@@ -28,6 +28,7 @@ public class Person extends People{
     }
     public void printName() {
         System.out.println(NAME);
+        StringBuilder a = new StringBuilder();
     }
 }
 
